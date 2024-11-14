@@ -18,12 +18,6 @@ searchBox.addEventListener('keyup', function() {
     }
 });
 
-contactList.forEach(function(contacts){
-    contacts.onclick = function(){
-        searchBox.innerHTML = this.textContent;
-    }
-});
-
 contactList.forEach(function(contact) {
   contact.onclick = function() {
       searchBox.innerHTML = this.textContent;
