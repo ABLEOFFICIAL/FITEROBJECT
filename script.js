@@ -18,10 +18,10 @@ searchBox.addEventListener('keyup', function() {
     }
 });
 
-contactList.forEach(function(contact) {
-  contact.onclick = function() {
-      searchBox.innerHTML = this.textContent;
-      // banklist.classList.toggle('hide');
-      // arrow.classList.toggle('rotate');
-  };
+contactList.forEach(contact => {
+  contact.addEventListener('click', function() {
+    contact.onclick = function() {
+      searchBox.value = contact.textContent;
+    } 
+  });
 });
